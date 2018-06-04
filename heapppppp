@@ -1,23 +1,42 @@
 import java.util.Scanner;
 public class heap {
 	public static void main(String args[]) {
-        Scanner obj=new Scanner(System.in);
-		System.out.println("How many numbers you would like to enter?");
-		int amount=obj.nextInt();
-		
-		
-		
-        int arr[] = {};
-        int n = arr.length;
- 
+        Scanner obj=new Scanner(System.in);				
+        int in1, in2, in3, in4, in5, in6, in7, in8;
+        
+        System.out.println("  _    _                     _____            _   \r\n" + 
+        		" | |  | |                   / ____|          | |  \r\n" + 
+        		" | |__| | ___  __ _ _ __   | (___   ___  _ __| |_ \r\n" + 
+        		" |  __  |/ _ \\/ _` | '_ \\   \\___ \\ / _ \\| '__| __|\r\n" + 
+        		" | |  | |  __/ (_| | |_) |  ____) | (_) | |  | |_ \r\n" + 
+        		" |_|  |_|\\___|\\__,_| .__/  |_____/ \\___/|_|   \\__|\r\n" + 
+        		"                   | |                            \r\n" + 
+        		"                   |_|                            ");
+        
+        
+        
+        System.out.println("Enter 8 numbers to sort");
+        in1 = obj.nextInt();							
+        in2 = obj.nextInt();
+        in3 = obj.nextInt();
+        in4 = obj.nextInt();
+        in5 = obj.nextInt();
+        in6 = obj.nextInt();
+        in7 = obj.nextInt();
+        in8 = obj.nextInt();	
+															
+		int arr[] = {in1, in2, in3, in4, in5, in6, in7, in8};
+		int grr[] = {arr[0], arr[1], arr[2], arr[3], arr[4], arr[5], arr[6], arr[7]};
+        int n = arr.length;										
+        System.out.println("Numbers before sorting");
+        printArray(arr);
         heap ob = new heap();
         ob.sort(arr);
  
-        System.out.println("The sorted numbers are:");
+        System.out.println("Numbers sorted:");
         printArray(arr);
-        
-        
-        
+        printArray(grr);
+  
     }
 	
 	public void sort(int arr[]) {
@@ -63,4 +82,5 @@ public class heap {
         System.out.print(arr[i]+" ");
         System.out.println();
     } 
-}
+
+
